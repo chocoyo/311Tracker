@@ -1,0 +1,19 @@
+<h1>Calls</h1>
+
+<table>
+  <tr>
+    <th>Neighbourhood</th>
+    <th>Service Area</th>
+    <th>Service Request</th>
+    <th></th>
+  </tr>
+
+<% @calls.each do |call| %>
+   <tr>
+      <td><%= call.neighbourhood.neighbourhood %></td>
+      <td><%= call.service_area.service_area %></td>
+      <td><%= call.service_request.service_request %></td>
+
+   </tr>
+<% end %>
+</table>
