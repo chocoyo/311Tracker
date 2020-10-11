@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  call_time: 2020-10-11 16:53:14
+  service_area: one
+  service_request: one
+  ward: one
+  neighbourhood: one
+
+two:
+  call_time: 2020-10-11 16:53:14
+  service_area: two
+  service_request: two
+  ward: two
+  neighbourhood: two
