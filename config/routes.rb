@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   get "/neighbourhoods/", to: "neighbourhood#index"
   get "neighbourhoods/:id", to: "neighbourhood#show", as: "neighbourhood"
+
+  get "/wards/", to: "wards#index"
+  get "wards/:id", to: "wards#show", as: "ward"
 end
