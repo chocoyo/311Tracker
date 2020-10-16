@@ -1,0 +1,14 @@
+<h1>Service Requests</h1>
+
+<table>
+  <tr>
+    <th>Service Requests</th>
+    <th></th>
+  </tr>
+
+  <% @service_requests.each do |request| %>
+    <tr>
+        <td><%= request.service_request %></td>
+    </tr>
+  <% end %>
+</table>

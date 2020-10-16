@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   get "/service_areas/", to: "service_areas#index"
   get "service_areas/:id", to: "service_areas#show", as: "service_area"
+
+  get "/service_requests/", to: "service_requests#index"
+  get "service_requests/:id", to: "service_requests#show", as: "service_request"
 end
