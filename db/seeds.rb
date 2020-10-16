@@ -15,16 +15,15 @@ calls = CSV.parse(data, headers: true, encoding: "iso-8859-1")
 i = 0
 puts "Populating Database"
 calls.each do |call|
+  ward = Ward.find_or_create_by(name: call["Ward"])
   Call.create(
-    service_area:    ServiceArea.find_or_create_by(service_area: call["Service Area"]),
-    service_request: ServiceRequest.find_or_create_by(service_request: call["Service Request"]),
-    ward:            Ward.find_or_create_by(ward: call["Ward"]),
-    neighbourhood:   Neighbourhood.find_or_create_by(neighbourhood: call["Neighbourhood"])
+    service_area:    ServiceArea.find_or_create_by(name: call["Service Area"]),
+    service_request: ServiceRequest.find_or_create_by(name: call["Service Request"]),
+    ward:            ward,
+    neighbourhood:   Neighbourhood.find_or_create_by(name: call["Neighbourhood"], ward: ward)
   )
   i += 1
-  if i == 200
-    break
-  end
+  break if i == 200
 end
 
 puts "Seed Compeleted"
