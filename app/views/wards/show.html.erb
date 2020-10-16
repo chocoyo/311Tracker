@@ -8,7 +8,7 @@
   </tr>
   <% @neighbourhoods.each do |hood| %>
     <tr>
-      <td><%= hood.name %></td>
+      <td><%= hood.name %> - <%= @calls.where(neighbourhood: hood).count %> Calls</td>
     </tr>
   <% end %>
 </table>
