@@ -1,6 +1,6 @@
 class NeighbourhoodController < ApplicationController
   def index
-    @neighbourhoods = Neighbourhood.all
+    @neighbourhoods = Neighbourhood.all.page params[:page]
   end
 
   def show
