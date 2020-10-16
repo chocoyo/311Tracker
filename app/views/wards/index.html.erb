@@ -9,6 +9,7 @@
   <% @wards.each do |ward| %>
     <tr>
         <td><%= ward.ward %></td>
+        <td><%= link_to 'Show', ward_path(ward) %></td>
     </tr>
   <% end %>
 </table>
