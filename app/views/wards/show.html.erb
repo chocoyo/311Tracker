@@ -1,11 +1,13 @@
 <h1 class="text-center">Wards</h1>
 
-<table>
+<table class="text-center">
   <tr>
     <th>Neighbourhoods In <%=@ward.name%></th>
     <th></th>
   </tr>
-   <tr>
-      <td>Test</td>
-   </tr>
+  <% @neighbourhoods.each do |hood| %>
+    <tr>
+      <td><%= hood.name %></td>
+    </tr>
+  <% end %>
 </table>

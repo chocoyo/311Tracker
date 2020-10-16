@@ -5,5 +5,6 @@ class WardsController < ApplicationController
 
   def show
     @ward = Ward.find(params[:id])
+    @neighbourhoods = Neighbourhood.where(ward: @ward)
   end
 end
