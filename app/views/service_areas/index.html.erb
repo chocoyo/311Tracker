@@ -1,0 +1,14 @@
+<h1>Service Areas</h1>
+
+<table>
+  <tr>
+    <th>Service Areas</th>
+    <th></th>
+  </tr>
+
+  <% @service_areas.each do |area| %>
+    <tr>
+        <td><%= area.service_area %></td>
+    </tr>
+  <% end %>
+</table>
