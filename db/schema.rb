@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_11_215313) do
+ActiveRecord::Schema.define(version: 2020_10_16_031439) do
 
   create_table "calls", force: :cascade do |t|
     t.datetime "call_time"
@@ -27,25 +27,25 @@ ActiveRecord::Schema.define(version: 2020_10_11_215313) do
   end
 
   create_table "neighbourhoods", force: :cascade do |t|
-    t.text "neighbourhood"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "service_areas", force: :cascade do |t|
-    t.text "service_area"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "service_requests", force: :cascade do |t|
-    t.text "service_request"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "wards", force: :cascade do |t|
-    t.text "ward"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
