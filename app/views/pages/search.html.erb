@@ -1,6 +1,6 @@
 <h1>Search Results</h1>
 
-<% if @search_results != nil %>
+<% if @search_results != nil && !@search_results.empty? %>
   <table class="table table-bordered table-striped">
     <tr>
       <th>Neighbourhood</th>
@@ -18,6 +18,8 @@
   <% end %>
   </table>
   <%= paginate @search_results %>
-<% else %>
+<% elsif @search_results == nil%>
   <h1 class="text-center">No Search Criteria Provided</h1>
+<% else %>
+  <h1 class="text-center">No Calls Found</h1>
 <% end %>
