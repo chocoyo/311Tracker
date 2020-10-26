@@ -1,0 +1,20 @@
+<h1>Search Results</h1>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Neighbourhood</th>
+    <th>Service Area</th>
+    <th>Service Request</th>
+    <th></th>
+  </tr>
+
+<% @search_results.each do |res| %>
+   <tr>
+      <td><%= res.neighbourhood.name %></td>
+      <td><%= res.service_area.name %></td>
+      <td><%= res.service_request.name %></td>
+      <td><%= link_to 'Show', call_path(res) %></td>
+   </tr>
+<% end %>
+</table>
+<%= paginate @search_results %>

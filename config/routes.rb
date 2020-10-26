@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   get "/service_requests/", to: "service_requests#index"
   get "service_requests/:id", to: "service_requests#show", as: "service_request"
+
+  get "/search", to: "pages#search"
 end
