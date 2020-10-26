@@ -1,20 +1,23 @@
 <h1>Search Results</h1>
 
-<table class="table table-bordered table-striped">
-  <tr>
-    <th>Neighbourhood</th>
-    <th>Service Area</th>
-    <th>Service Request</th>
-    <th></th>
-  </tr>
-
-<% @search_results.each do |res| %>
-   <tr>
-      <td><%= res.neighbourhood.name %></td>
-      <td><%= res.service_area.name %></td>
-      <td><%= res.service_request.name %></td>
-      <td><%= link_to 'Show', call_path(res) %></td>
-   </tr>
+<% if @search_results != nil %>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>Neighbourhood</th>
+      <th>Service Area</th>
+      <th>Service Request</th>
+      <th></th>
+    </tr>
+  <% @search_results.each do |res| %>
+    <tr>
+        <td><%= res.neighbourhood.name %></td>
+        <td><%= res.service_area.name %></td>
+        <td><%= res.service_request.name %></td>
+        <td><%= link_to 'Show', call_path(res) %></td>
+    </tr>
+  <% end %>
+  </table>
+  <%= paginate @search_results %>
+<% else %>
+  <h1 class="text-center">No Search Criteria Provided</h1>
 <% end %>
-</table>
-<%= paginate @search_results %>

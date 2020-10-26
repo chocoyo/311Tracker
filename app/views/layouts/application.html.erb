@@ -29,16 +29,19 @@
         <div class="md-form my-0">
            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
         </div>
-        <select class="mdb-select" searchable="Search here..">
-          <option value="1" disabled selected>Choose your option</option>
-          <option value="2" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">
-            example 1
+        <select name="category" class="mdb-select" searchable="Search here..">
+          <option value="1" disabled selected>Category</option>
+          <option value="Neighbourhoods" class="rounded-circle">
+            Neighbourhoods
           </option>
-          <option value="3" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">
-            example 2
+          <option value="Wards" class="rounded-circle">
+            Wards
           </option>
-          <option value="4" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">
-            example 1
+          <option value="Service_Areas" class="rounded-circle">
+            Service Areas
+          </option>
+          <option value="Service_Requests" class="rounded-circle">
+            Service Requests
           </option>
         </select>
         <button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search</button>
