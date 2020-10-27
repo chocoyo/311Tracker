@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "pages#about"
   get "calls/index"
   get "/calls/", to: "calls#index"
   get "calls/:id", to: "calls#show", as: "call"
@@ -16,4 +17,7 @@ Rails.application.routes.draw do
   get "service_requests/:id", to: "service_requests#show", as: "service_request"
 
   get "/search", to: "pages#search"
+
+  get "pages/about"
+  get "/about", to: "pages#about"
 end

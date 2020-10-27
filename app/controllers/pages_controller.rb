@@ -19,4 +19,6 @@ class PagesController < ApplicationController
       @search_results = Call.where(neighbourhood: @matching_neighbourhoods).page params[:page]
     end
   end
+
+  def about; end
 end
