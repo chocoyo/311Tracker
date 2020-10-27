@@ -13,3 +13,20 @@
       <td><%= @call.service_request.name %></td>
    </tr>
 </table>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmlnbW1hbiIsImEiOiJja2dzNGU4ajUwOGF6Mnlxb25zMjI2N3h2In0.IU2XJFaFs82zUZYCXOHq2Q';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+center: [-74.5, 40], // starting position [lng, lat]
+zoom: 9 // starting zoom
+});
+
+var marker = new mapboxgl.Marker()
+.setLngLat([30.5, 50.5])
+.addTo(map);
+
+map.jumpTo({ center: marker.getLngLat() });
+</script>
