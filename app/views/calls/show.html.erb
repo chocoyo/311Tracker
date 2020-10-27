@@ -16,6 +16,9 @@
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
+var lng = '<%=@call.lng%>';
+var lat ='<%=@call.lat%>';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmlnbW1hbiIsImEiOiJja2dzNGU4ajUwOGF6Mnlxb25zMjI2N3h2In0.IU2XJFaFs82zUZYCXOHq2Q';
 var map = new mapboxgl.Map({
 container: 'map',
@@ -25,7 +28,7 @@ zoom: 9 // starting zoom
 });
 
 var marker = new mapboxgl.Marker()
-.setLngLat([30.5, 50.5])
+.setLngLat([lng, lat])
 .addTo(map);
 
 map.jumpTo({ center: marker.getLngLat() });
