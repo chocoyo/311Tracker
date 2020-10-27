@@ -16,7 +16,13 @@ i = 0
 puts "Populating Database"
 calls.each do |call|
   ward = Ward.find_or_create_by(name: call["Ward"])
+  latlng_ar = call["Location 1"].remove("(").remove("(").remove(")").split(",")
+  lat = latlng_ar[0].strip
+  lng = latlng_ar[1].strip
+
   Call.create(
+    lat:             lat,
+    lng:             lng,
     service_area:    ServiceArea.find_or_create_by(name: call["Service Area"]),
     service_request: ServiceRequest.find_or_create_by(name: call["Service Request"]),
     ward:            ward,

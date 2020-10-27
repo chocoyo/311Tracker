@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_16_133552) do
+ActiveRecord::Schema.define(version: 2020_10_27_153400) do
 
   create_table "calls", force: :cascade do |t|
     t.datetime "call_time"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_10_16_133552) do
     t.integer "neighbourhood_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
     t.index ["neighbourhood_id"], name: "index_calls_on_neighbourhood_id"
     t.index ["service_area_id"], name: "index_calls_on_service_area_id"
     t.index ["service_request_id"], name: "index_calls_on_service_request_id"
