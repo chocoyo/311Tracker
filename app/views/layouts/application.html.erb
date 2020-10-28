@@ -35,7 +35,6 @@
            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
         </div>
         <select name="category" class="mdb-select">
-          <option value="1" disabled selected>All Calls</option>
           <option value="neighbourhood" class="rounded-circle">
             Neighbourhoods
           </option>
@@ -45,7 +44,7 @@
           <option value="service_area" class="rounded-circle">
             Service Areas
           </option>
-          <option value="service_request" class="rounded-circle">
+          <option value="service_request" class="rounded-circle" selected>
             Service Requests
           </option>
         </select>
